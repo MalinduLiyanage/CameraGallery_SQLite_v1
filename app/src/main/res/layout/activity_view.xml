@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ViewActivity">
+
+    <LinearLayout
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="4"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image View">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/img_view"
+                    android:src="@drawable/placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp">
+
+                </ImageView>
+
+                <org.osmdroid.views.MapView
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/map_view"
+                    android:layout_width="325dp"
+                    android:layout_height="276dp"/>
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/internet_text"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="15dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="An active Internet connection is needed to retrieve map data.">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/del_btn"
+                    android:layout_weight="4"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:background="@drawable/bg_btn"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Image">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
